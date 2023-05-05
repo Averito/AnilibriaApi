@@ -7,7 +7,7 @@ import type { Series } from '@api/types/series'
 import type { Title } from '@api/types/title'
 import type { Torrent } from '@api/types/torrent'
 import type { Years } from '@api/types/years'
-import type { YouTube } from '@api/types/youTube'
+import type { YouTube } from '@api/types/youtube'
 
 export type {
 	ObjectSeries,

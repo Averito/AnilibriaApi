@@ -7,7 +7,7 @@
     "start": "node dist/main.js",
     "build": "rollup --config rollup.config.js --configPlugin typescript",
     "lint": "eslint --fix ./src/**/*.{js,ts}",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "keywords": [
     "anilibria",
