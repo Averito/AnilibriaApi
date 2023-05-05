@@ -64,7 +64,7 @@ anilibriaApi.searchTitles({
 });
 ```
 
-Под капотом используется (https://www.npmjs.com/package/axios)[axios] и если вы хотите изменить настройки, то нужно дать соответствующие настройки конструктуру Anilibria
+Под капотом используется axios и если вы хотите изменить настройки, то нужно дать соответствующие настройки конструктуру Anilibria
 ```js
 const anilibriaApi = new Anilibria({
   axiosOptions: {
