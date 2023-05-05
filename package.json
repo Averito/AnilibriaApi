@@ -1,14 +1,26 @@
 {
-  "name": "@averito/anilibria-api",
+  "name": "anilibria-api",
   "version": "1.0.0",
   "description": "This library is not an official wrapper over anilibria api",
-  "main": "index.ts",
   "scripts": {
     "start": "node dist/main.js",
-    "build": "rollup --config rollup.config.js --configPlugin typescript",
+    "build:rollup": "rollup --config rollup.config.js --configPlugin typescript --bundleConfigAsCjs",
+    "build:defs": "tsc",
+    "build": "npm run build:rollup && npm run build:defs",
     "lint": "eslint --fix ./src/**/*.{js,ts}",
     "test": "jest --passWithNoTests"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/bundle.mjs",
+      "require": "./dist/cjs/bundle.cjs",
+      "default": "./dist/esm/bundle.cjs"
+    }
+  },
+  "main": "./dist/cjs/bundle.cjs",
+  "module": "./dist/esm/bundle.js",
+  "type": "module",
+  "types": "./types/index.d.ts",
   "keywords": [
     "anilibria",
     "anime",
@@ -24,7 +36,8 @@
     }
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "nhentai-api": "^3.4.3"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
@@ -52,7 +65,8 @@
     "url": "git+https://github.com/Averito/AnilibriaApi.git"
   },
   "bugs": {
-    "url": "https://github.com/Averito/AnilibriaApi/issues"
+    "url": "https://github.com/Averito/AnilibriaApi/issues",
+    "email": "avenantmar@gmail.com"
   },
   "homepage": "https://github.com/Averito/AnilibriaApi#readme"
 }

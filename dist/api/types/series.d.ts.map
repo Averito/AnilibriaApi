@@ -1,1 +1,0 @@
-{"version":3,"file":"series.d.ts","sourceRoot":"","sources":["../../../src/api/types/series.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,MAAM;IACtB,KAAK,EAAE,MAAM,CAAA;IACb,OAAO,EAAE,MAAM,CAAA;IACf,GAAG,EAAE;QACJ,GAAG,CAAC,EAAE,MAAM,CAAA;QACZ,EAAE,EAAE,MAAM,CAAA;QACV,EAAE,EAAE,MAAM,CAAA;KACV,CAAA;CACD"}

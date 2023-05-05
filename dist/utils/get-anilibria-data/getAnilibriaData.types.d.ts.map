@@ -1,1 +1,0 @@
-{"version":3,"file":"getAnilibriaData.types.d.ts","sourceRoot":"","sources":["../../../src/utils/get-anilibria-data/getAnilibriaData.types.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,8BAA8B,CAAA;AAE1D,MAAM,WAAW,aAAa,CAAC,CAAC;IAC/B,GAAG,EAAE;QACJ,IAAI,EAAE,MAAM,CAAA;QACZ,eAAe,EAAE,MAAM,CAAA;QACvB,WAAW,EAAE,WAAW,CAAA;KACxB,CAAA;IACD,IAAI,EAAE,CAAC,CAAA;CACP"}

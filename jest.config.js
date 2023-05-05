@@ -1,4 +1,4 @@
-const customJestConfig = {
+export default {
 	"preset": "ts-jest",
 	"testEnvironment": "node",
 	"transform": {
@@ -6,7 +6,6 @@ const customJestConfig = {
 	},
 	"transformIgnorePatterns": [
 		"node_modules/(?!variables/.*)"
-	]
+	],
+	"coveragePathIgnorePatterns": ["./src", "./node_modules", "./types", "./dist"]
 }
-
-module.exports = customJestConfig
