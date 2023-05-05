@@ -1,5 +1,5 @@
 {
-  "name": "anilibria-api",
+  "name": "@averito/anilibria-api",
   "version": "1.0.0",
   "description": "This library is not an official wrapper over anilibria api",
   "main": "index.ts",
@@ -43,5 +43,16 @@
     "ts-jest": "^29.1.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Averito/AnilibriaApi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Averito/AnilibriaApi/issues"
+  },
+  "homepage": "https://github.com/Averito/AnilibriaApi#readme"
 }

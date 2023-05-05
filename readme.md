@@ -21,13 +21,13 @@ npm i anilibria-api
 #### CommonJS
 
 ```ts
-const { getAnilibriaTitle, Series } = require('anilibria-api');
+const { getAnilibriaTitle, Series } = require('@averito/anilibria-api');
 ```
 
 #### ES6
 
 ```ts
-import { Anilibria, Title } from 'anilibria-api';
+import { Anilibria, Title } from '@averito/anilibria-api';
 ```
 
 ### Использование
