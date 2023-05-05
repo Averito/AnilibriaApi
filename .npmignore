@@ -3,6 +3,8 @@
 *.code-workspace
 .idea
 
+.husky
+
 # VS
 .vs/
 ## User-specific files

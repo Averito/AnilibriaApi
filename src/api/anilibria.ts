@@ -1,28 +1,28 @@
 import axios, { AxiosInstance, AxiosStatic } from 'axios'
 
-import { ANILIBRIA_API_URI_BY_DEFAULT } from '@api/anilibria.config'
-import { AnilibriaOptions } from '@api/anilibria.types'
-import { GetAnilibriaTitleQueryParams } from '@api/methods/get-anilibria-title'
-import { GetAnilibriaTitlesQueryParams } from '@api/methods/get-anilibria-titles'
-import { GetAnilibriaUpdatesQueryParams } from '@api/methods/get-anilibria-updates'
-import { GetAnilibriaChangesQueryParams } from '@api/methods/get-anilibria-changes'
-import { GetAnilibriaScheduleQueryParams } from '@api/methods/get-anilibria-schedule'
-import { GetAnilibriaRandomTitleQueryParams } from '@api/methods/get-anilibria-random-title'
-import { GetAnilibriaYouTubeQueryParams } from '@api/methods/get-anilibria-youtube'
+import { ANILIBRIA_API_URI_BY_DEFAULT } from './anilibria.config'
+import { AnilibriaOptions } from './anilibria.types'
+import { GetAnilibriaTitleQueryParams } from './methods/get-anilibria-title'
+import { GetAnilibriaTitlesQueryParams } from './methods/get-anilibria-titles'
+import { GetAnilibriaUpdatesQueryParams } from './methods/get-anilibria-updates'
+import { GetAnilibriaChangesQueryParams } from './methods/get-anilibria-changes'
+import { GetAnilibriaScheduleQueryParams } from './methods/get-anilibria-schedule'
+import { GetAnilibriaRandomTitleQueryParams } from './methods/get-anilibria-random-title'
+import { GetAnilibriaYouTubeQueryParams } from './methods/get-anilibria-youtube'
 import {
 	GetAnilibriaFeedQueryParams,
 	GetAnilibriaFeedReturn
-} from '@api/methods/get-anilibria-feed'
+} from './methods/get-anilibria-feed'
 import {
 	GetAnilibriaSeedStatsQueryParams,
 	GetAnilibriaSeedStatsReturn
-} from '@api/methods/get-anilibria-seed-stats'
-import { GetAnilibriaRssQueryParams } from '@api/methods/get-anilibria-rss'
-import { AnilibriaSearchTitlesQueryParams } from '@api/methods/anilibria-search-titles'
-import { AnilibriaAdvancedSearchQueryParams } from '@api/methods/anilibria-advanced-search'
-import { getAnilibriaData } from '@utils'
-import { Schedule, Title, YouTube } from '@api/types'
-import { GetAnilibriaTeamReturn } from '@api/methods/get-anilibria-team'
+} from './methods/get-anilibria-seed-stats'
+import { GetAnilibriaRssQueryParams } from './methods/get-anilibria-rss'
+import { AnilibriaSearchTitlesQueryParams } from './methods/anilibria-search-titles'
+import { AnilibriaAdvancedSearchQueryParams } from './methods/anilibria-advanced-search'
+import { GetAnilibriaTeamReturn } from './methods/get-anilibria-team'
+import { getAnilibriaData } from '../utils'
+import { Schedule, YouTube, Title } from './types'
 
 export class Anilibria {
 	private _url: string = ANILIBRIA_API_URI_BY_DEFAULT

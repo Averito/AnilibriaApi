@@ -1,8 +1,8 @@
-import { Torrent } from '@api/types/torrent';
-import { ObjectSeries } from '@api/types/object-series';
-import { Rating } from '@api/types/rating';
-import { Genres } from '@api/types/genres';
-import { Block } from '@api/types/block';
+import { Torrent } from './torrent';
+import { ObjectSeries } from './object-series';
+import { Rating } from './rating';
+import { Genres } from './genres';
+import { Block } from './block';
 export interface Title {
     id: number;
     code: string;

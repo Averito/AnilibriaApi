@@ -1,6 +1,6 @@
 import { GetAnilibriaRandomTitleQueryParams } from './getAnilibriaRandomTitle.types'
-import { getAnilibriaData } from '@utils'
-import { Title } from '@api/types'
+import { getAnilibriaData } from '../../../utils'
+import { Title } from '../../types'
 
 export const getAnilibriaRandomTitle = async (
 	params: GetAnilibriaRandomTitleQueryParams = {}

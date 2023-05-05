@@ -1,5 +1,5 @@
-import { Anilibria } from '@api/anilibria'
-import { ANILIBRIA_API_URI_BY_DEFAULT } from '@api/anilibria.config'
+import { Anilibria } from './api/anilibria'
+import { ANILIBRIA_API_URI_BY_DEFAULT } from './api/anilibria.config'
 import {
 	getAnilibriaFeed,
 	getAnilibriaGenres,
@@ -17,8 +17,7 @@ import {
 	getAnilibriaYears,
 	getAnilibriaSchedule,
 	getAnilibriaTeam
-} from '@api/methods'
-
+} from './api/methods'
 import type {
 	Title,
 	YouTube,
@@ -30,7 +29,7 @@ import type {
 	Series,
 	Block,
 	ObjectSeries
-} from '@api/types'
+} from './api/types'
 
 export type {
 	Title,

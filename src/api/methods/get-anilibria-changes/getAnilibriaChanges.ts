@@ -1,6 +1,6 @@
 import { GetAnilibriaChangesQueryParams } from './getAnilibriaChanges.types'
-import { getAnilibriaData } from '@utils'
-import { Title } from '@api/types'
+import { getAnilibriaData } from '../../../utils'
+import { Title } from '../../types'
 
 export const getAnilibriaChanges = async (
 	params: GetAnilibriaChangesQueryParams = {}

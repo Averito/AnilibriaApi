@@ -1,9 +1,9 @@
 import {
-	DescriptionType,
 	GeneralQueryObjectParams,
 	Include,
-	PlaylistType
-} from '@api/methods/types'
+	PlaylistType,
+	DescriptionType
+} from '../types'
 
 interface GetAnilibriaTitleQueries extends GeneralQueryObjectParams {
 	id: number

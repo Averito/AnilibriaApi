@@ -1,4 +1,4 @@
-import { Title } from '@api/types/title'
+import { Title } from './title'
 
 export interface Schedule {
 	day: number

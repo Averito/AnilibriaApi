@@ -1,6 +1,6 @@
-import { AnilibriaSearchTitlesQueryParams } from '@api/methods/anilibria-search-titles/anilibriaSearchTitles.types'
-import { getAnilibriaData } from '@utils'
-import { Title } from '@api/types'
+import { AnilibriaSearchTitlesQueryParams } from './anilibriaSearchTitles.types'
+import { getAnilibriaData } from '../../../utils'
+import { Title } from '../../types'
 
 export const anilibriaSearchTitles = async (
 	params: AnilibriaSearchTitlesQueryParams = {}

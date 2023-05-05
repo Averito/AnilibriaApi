@@ -1,4 +1,4 @@
-import { getAnilibriaData } from '@utils'
+import { getAnilibriaData } from '../../../utils'
 import { GetAnilibriaTeamReturn } from './getAnilibriaTeam.types'
 
 export const getAnilibriaTeam = async () => {

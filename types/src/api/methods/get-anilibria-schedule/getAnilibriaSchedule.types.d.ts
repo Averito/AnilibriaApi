@@ -1,4 +1,4 @@
-import { DescriptionType, GeneralQueryObjectParams, Include, PlaylistType } from '@api/methods/types';
+import { GeneralQueryObjectParams, Include, PlaylistType, DescriptionType } from '../types';
 interface GetAnilibriaScheduleQueries extends GeneralQueryObjectParams {
     include: Include;
     days: number[];

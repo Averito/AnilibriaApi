@@ -1,7 +1,10 @@
 import axios, { AxiosInstance, AxiosStatic } from 'axios'
 
-import { QueryObject, queryParamsString } from '@helpers/query-params-string'
-import { ANILIBRIA_API_URI_BY_DEFAULT } from '@api/anilibria.config'
+import {
+	QueryObject,
+	queryParamsString
+} from '../../helpers/query-params-string'
+import { ANILIBRIA_API_URI_BY_DEFAULT } from '../../api/anilibria.config.js'
 import { GetDataReturn } from './getAnilibriaData.types'
 
 export const getAnilibriaData = async <T>(

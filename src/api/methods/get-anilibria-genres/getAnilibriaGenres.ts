@@ -1,6 +1,6 @@
-import { GetAnilibriaGenresQueryParams } from '@api/methods/get-anilibria-genres/getAnilibriaGenres.types'
-import { getAnilibriaData } from '@utils'
-import { Genres } from '@api/types'
+import { GetAnilibriaGenresQueryParams } from './getAnilibriaGenres.types'
+import { getAnilibriaData } from '../../../utils'
+import { Genres } from '../../types'
 
 export const getAnilibriaGenres = async (
 	params: GetAnilibriaGenresQueryParams = {}

@@ -1,5 +1,5 @@
 {
-  "name": "anilibria-api",
+  "name": "anilibria-api-wrapper",
   "version": "1.0.0",
   "description": "This library is not an official wrapper over anilibria api",
   "scripts": {
@@ -12,8 +12,15 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/esm/bundle.mjs",
-      "require": "./dist/cjs/bundle.cjs",
+      "import": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/esm/bundle.mjs"
+      },
+      "require": {
+        "types": "./types/index.d.ts",
+        "default": "./dist/cjs/bundle.cjs"
+      },
+      "types": "./types/index.d.ts",
       "default": "./dist/esm/bundle.cjs"
     }
   },

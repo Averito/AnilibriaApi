@@ -2,7 +2,7 @@ import {
 	GetAnilibriaFeedQueryParams,
 	GetAnilibriaFeedReturn
 } from './getAnilibriaFeed.types'
-import { getAnilibriaData } from '@utils'
+import { getAnilibriaData } from '../../../utils'
 
 export const getAnilibriaFeed = async (
 	params: GetAnilibriaFeedQueryParams = {}

@@ -1,10 +1,10 @@
 import {
-	DescriptionType,
 	GeneralQueryObjectParams,
 	Include,
-	PlaylistType
-} from '@api/methods/types'
-import { Title, YouTube } from '@api/types'
+	PlaylistType,
+	DescriptionType
+} from '../types'
+import { Title, YouTube } from '../../types'
 
 interface GetAnilibriaFeedQueries extends GeneralQueryObjectParams {
 	limit: number

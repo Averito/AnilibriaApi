@@ -1,4 +1,4 @@
-import { DescriptionType, GeneralQueryObjectParams, Include } from '@api/methods/types';
+import { GeneralQueryObjectParams, Include, DescriptionType } from '../types';
 interface GetAnilibriaChangesQueries extends GeneralQueryObjectParams {
     include: Include;
     limit: number;

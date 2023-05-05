@@ -1,6 +1,6 @@
 import { GetAnilibriaScheduleQueryParams } from './getAnilibriaSchedule.types'
-import { getAnilibriaData } from '@utils'
-import { Schedule } from '@api/types'
+import { getAnilibriaData } from '../../../utils'
+import { Schedule } from '../../types'
 
 export const getAnilibriaSchedule = async (
 	params: GetAnilibriaScheduleQueryParams = {}

@@ -1,4 +1,4 @@
-import { getAnilibriaData } from '@utils'
+import { getAnilibriaData } from '../../../utils'
 import { GetAnilibriaRssQueryParams } from './getAnilibriaRss.types'
 
 export const getAnilibriaRss = async (

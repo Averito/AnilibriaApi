@@ -1,4 +1,4 @@
-import { getAnilibriaData } from '@utils'
+import { getAnilibriaData } from '../../../utils'
 
 export const getAnilibriaCachingNodes = async () => {
 	try {

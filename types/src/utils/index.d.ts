@@ -1,2 +1,2 @@
-import { getAnilibriaData } from '@utils/get-anilibria-data';
+import { getAnilibriaData } from './get-anilibria-data';
 export { getAnilibriaData };

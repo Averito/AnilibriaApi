@@ -1,5 +1,5 @@
-import { getAnilibriaData } from '@utils'
-import { Years } from '@api/types'
+import { getAnilibriaData } from '../../../utils'
+import { Years } from '../../types/years'
 
 export const getAnilibriaYears = async () => {
 	try {

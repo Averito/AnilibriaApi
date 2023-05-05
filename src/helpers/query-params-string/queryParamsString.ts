@@ -9,7 +9,6 @@ export const queryParamsString = (queryParamsObject: QueryObject) => {
 		queryString.set(key, stringQueryParamsObject[key].join(','))
 	}
 
-	return `${
-		queryString.toString().length > 0 ? '?' : ''
-	}${queryString.toString()}`
+	const questionSymbol = queryString.toString().length > 0 ? '?' : ''
+	return `${questionSymbol}${queryString.toString()}`
 }

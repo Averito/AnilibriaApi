@@ -1,4 +1,4 @@
-import { GeneralQueryObjectParams } from '@api/methods/types'
+import { GeneralQueryObjectParams } from '../types'
 
 interface GetAnilibriaYouTubeQueries extends GeneralQueryObjectParams {
 	limit: number
