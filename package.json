@@ -1,0 +1,47 @@
+{
+  "name": "anilibria-api",
+  "version": "1.0.0",
+  "description": "This library is not an official wrapper over anilibria api",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "rollup --config rollup.config.js --configPlugin typescript",
+    "lint": "eslint --fix ./src/**/*.{js,ts}",
+    "test": "jest"
+  },
+  "keywords": [
+    "anilibria",
+    "anime",
+    "api",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Averito",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/jest": "^29.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "rollup": "^3.21.4",
+    "rollup-plugin-typescript-paths": "^1.4.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
