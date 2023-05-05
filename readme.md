@@ -5,13 +5,13 @@
 Установка используя yarn:
 
 ```
-yarn add anilibria-api
+yarn add @averito/anilibria-api
 ```
 
 Установка используя npm:
 
 ```
-npm i anilibria-api
+npm i @averito/anilibria-api
 ```
 
 ## Пример
