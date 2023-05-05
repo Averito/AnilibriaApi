@@ -42,14 +42,14 @@ const anilibriaApi = new Anilibria();
 #### Получение тайтла (аниме)
 
 ```js
-anilibriaApi.getAnilibriaTitle().then(response => {
+anilibriaApi.getTitle().then(response => {
 	console.log(response.data)
 })
 ```
 
 #### Получение рандомного тайтла
 ```js
-await anilibriaApi.getAnilibriaRandomTitle() // Random Title
+await anilibriaApi.getRandomTitle() // Random Title
 // or
 await getAnilibriaRandomTitle()
 ````
@@ -57,7 +57,7 @@ await getAnilibriaRandomTitle()
 #### Поиск
 
 ```js
-anilibriaApi.anilibriaSearchTitles({
+anilibriaApi.searchTitles({
   search: 'Клинок'
 }).then(async response => {
 	console.log(response.data) // Результат поиска
