@@ -1,4 +1,4 @@
-# Node.JS not official client for anilibria api.
+# Not official Node.js client for anilibria api.
 
 ## Установка
 
