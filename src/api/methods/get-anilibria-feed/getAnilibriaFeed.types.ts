@@ -4,7 +4,7 @@ import {
 	Include,
 	PlaylistType
 } from '@api/methods/types'
-import { Title, Youtube } from '@api/types'
+import { Title, YouTube } from '@api/types'
 
 interface GetAnilibriaFeedQueries extends GeneralQueryObjectParams {
 	limit: number
@@ -18,7 +18,7 @@ interface GetAnilibriaFeedQueries extends GeneralQueryObjectParams {
 export type GetAnilibriaFeedQueryParams = Partial<GetAnilibriaFeedQueries>
 
 export interface GetAnilibriaFeedReturnDataYouTube {
-	youtube: Youtube
+	youtube: YouTube
 }
 
 export interface GetAnilibriaFeedReturnDataTitle {

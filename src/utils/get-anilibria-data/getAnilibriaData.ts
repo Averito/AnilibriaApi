@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios, { AxiosInstance, AxiosStatic } from 'axios'
 
 import { QueryObject, queryParamsString } from '@helpers/query-params-string'
 import { ANILIBRIA_API_URI_BY_DEFAULT } from '@api/anilibria.config'
@@ -6,12 +6,13 @@ import { GetDataReturn } from './getAnilibriaData.types'
 
 export const getAnilibriaData = async <T>(
 	method: string,
-	queryParams: QueryObject = {}
+	queryParams: QueryObject = {},
+	axiosInstance: AxiosStatic | AxiosInstance = axios
 ): Promise<GetDataReturn<T>> => {
 	try {
 		const url =
 			ANILIBRIA_API_URI_BY_DEFAULT + method + queryParamsString(queryParams)
-		const response = await axios.get<T>(url)
+		const response = await axiosInstance.get<T>(url)
 
 		return {
 			data: response.data,

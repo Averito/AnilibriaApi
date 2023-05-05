@@ -8,8 +8,8 @@ export const getAnilibriaSeedStats = async (
 	params: GetAnilibriaSeedStatsQueryParams = {}
 ) => {
 	try {
-		return await getAnilibriaData<GetAnilibriaSeedStatsReturn>(
-			'/getTeam',
+		return await getAnilibriaData<GetAnilibriaSeedStatsReturn[]>(
+			'/getSeedStats',
 			params
 		)
 	} catch (error) {

@@ -2,24 +2,6 @@ import axios, { AxiosInstance, AxiosStatic } from 'axios'
 
 import { ANILIBRIA_API_URI_BY_DEFAULT } from '@api/anilibria.config'
 import { AnilibriaOptions } from '@api/anilibria.types'
-import {
-	anilibriaSearchTitles,
-	anilibriaAdvancedSearch,
-	getAnilibriaTitle,
-	getAnilibriaTitles,
-	getAnilibriaRss,
-	getAnilibriaYears,
-	getAnilibriaRandomTitle,
-	getAnilibriaSeedStats,
-	getAnilibriaTeam,
-	getAnilibriaGenres,
-	getAnilibriaFeed,
-	getAnilibriaYouTube,
-	getAnilibriaUpdates,
-	getAnilibriaCachingNodes,
-	getAnilibriaChanges,
-	getAnilibriaSchedule
-} from '@api/methods'
 import { GetAnilibriaTitleQueryParams } from '@api/methods/get-anilibria-title'
 import { GetAnilibriaTitlesQueryParams } from '@api/methods/get-anilibria-titles'
 import { GetAnilibriaUpdatesQueryParams } from '@api/methods/get-anilibria-updates'
@@ -27,11 +9,20 @@ import { GetAnilibriaChangesQueryParams } from '@api/methods/get-anilibria-chang
 import { GetAnilibriaScheduleQueryParams } from '@api/methods/get-anilibria-schedule'
 import { GetAnilibriaRandomTitleQueryParams } from '@api/methods/get-anilibria-random-title'
 import { GetAnilibriaYouTubeQueryParams } from '@api/methods/get-anilibria-youtube'
-import { GetAnilibriaFeedQueryParams } from '@api/methods/get-anilibria-feed'
-import { GetAnilibriaSeedStatsQueryParams } from '@api/methods/get-anilibria-seed-stats'
+import {
+	GetAnilibriaFeedQueryParams,
+	GetAnilibriaFeedReturn
+} from '@api/methods/get-anilibria-feed'
+import {
+	GetAnilibriaSeedStatsQueryParams,
+	GetAnilibriaSeedStatsReturn
+} from '@api/methods/get-anilibria-seed-stats'
 import { GetAnilibriaRssQueryParams } from '@api/methods/get-anilibria-rss'
 import { AnilibriaSearchTitlesQueryParams } from '@api/methods/anilibria-search-titles'
 import { AnilibriaAdvancedSearchQueryParams } from '@api/methods/anilibria-advanced-search'
+import { getAnilibriaData } from '@utils'
+import { Schedule, Title, YouTube } from '@api/types'
+import { GetAnilibriaTeamReturn } from '@api/methods/get-anilibria-team'
 
 export class Anilibria {
 	private _url: string = ANILIBRIA_API_URI_BY_DEFAULT
@@ -47,7 +38,7 @@ export class Anilibria {
 		this._url = newUrl
 	}
 
-	private _axiosInstance: AxiosStatic | AxiosInstance = axios
+	private readonly _axiosInstance: AxiosStatic | AxiosInstance = axios
 
 	constructor(options: AnilibriaOptions = {}) {
 		if (options.url) this.url = options.url
@@ -57,7 +48,11 @@ export class Anilibria {
 
 	public async getAnilibriaTitle(params: GetAnilibriaTitleQueryParams = {}) {
 		try {
-			return await getAnilibriaTitle(params)
+			return await getAnilibriaData<Title>(
+				'/getTitle',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -65,7 +60,11 @@ export class Anilibria {
 
 	public async getAnilibriaTitles(params: GetAnilibriaTitlesQueryParams = {}) {
 		try {
-			return await getAnilibriaTitles(params)
+			return await getAnilibriaData<Title[]>(
+				'/getTitles',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -75,7 +74,11 @@ export class Anilibria {
 		params: GetAnilibriaUpdatesQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaUpdates(params)
+			return await getAnilibriaData<Title[]>(
+				'/getUpdates',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -85,7 +88,11 @@ export class Anilibria {
 		params: GetAnilibriaChangesQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaChanges(params)
+			return await getAnilibriaData<Title[]>(
+				'/getChanges',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -95,7 +102,11 @@ export class Anilibria {
 		params: GetAnilibriaScheduleQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaSchedule(params)
+			return await getAnilibriaData<Schedule[]>(
+				'/getSchedule',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -105,7 +116,11 @@ export class Anilibria {
 		params: GetAnilibriaRandomTitleQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaRandomTitle(params)
+			return await getAnilibriaData<Title>(
+				'/getRandomTitle',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -115,7 +130,11 @@ export class Anilibria {
 		params: GetAnilibriaYouTubeQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaYouTube(params)
+			return await getAnilibriaData<YouTube[]>(
+				'/getYouTube',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -123,7 +142,11 @@ export class Anilibria {
 
 	public async getAnilibriaFeed(params: GetAnilibriaFeedQueryParams = {}) {
 		try {
-			return await getAnilibriaFeed(params)
+			return await getAnilibriaData<GetAnilibriaFeedReturn[]>(
+				'/getFeed',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -131,7 +154,11 @@ export class Anilibria {
 
 	public async getAnilibriaYears() {
 		try {
-			return await getAnilibriaYears()
+			return await getAnilibriaData<number[]>(
+				'/getYears',
+				{},
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -139,7 +166,11 @@ export class Anilibria {
 
 	public async getAnilibriaGenres() {
 		try {
-			return await getAnilibriaGenres()
+			return await getAnilibriaData<string[]>(
+				'/getGenres',
+				{},
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -147,7 +178,11 @@ export class Anilibria {
 
 	public async getAnilibriaCachingNodes() {
 		try {
-			return await getAnilibriaCachingNodes()
+			return await getAnilibriaData<string[]>(
+				'/getCachingNodes',
+				{},
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -155,7 +190,11 @@ export class Anilibria {
 
 	public async getAnilibriaTeam() {
 		try {
-			return await getAnilibriaTeam()
+			return await getAnilibriaData<GetAnilibriaTeamReturn>(
+				'/getTeam',
+				{},
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -165,7 +204,11 @@ export class Anilibria {
 		params: GetAnilibriaSeedStatsQueryParams = {}
 	) {
 		try {
-			return await getAnilibriaSeedStats(params)
+			return await getAnilibriaData<GetAnilibriaSeedStatsReturn[]>(
+				'/getSeedStats',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -173,7 +216,11 @@ export class Anilibria {
 
 	public async getAnilibriaRss(params: GetAnilibriaRssQueryParams = {}) {
 		try {
-			return await getAnilibriaRss(params)
+			return await getAnilibriaData<string>(
+				'/getRSS',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -183,7 +230,11 @@ export class Anilibria {
 		params: AnilibriaSearchTitlesQueryParams = {}
 	) {
 		try {
-			return await anilibriaSearchTitles(params)
+			return await getAnilibriaData<Title[]>(
+				'/searchTitles',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}
@@ -193,7 +244,11 @@ export class Anilibria {
 		params: AnilibriaAdvancedSearchQueryParams
 	) {
 		try {
-			return await anilibriaAdvancedSearch(params)
+			return await getAnilibriaData<Title[]>(
+				'/advancedSearch',
+				params,
+				this._axiosInstance
+			)
 		} catch (error) {
 			throw error
 		}

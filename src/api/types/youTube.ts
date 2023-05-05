@@ -1,4 +1,4 @@
-export interface Youtube {
+export interface YouTube {
 	id: number
 	title: string
 	image: string

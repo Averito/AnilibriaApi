@@ -5,7 +5,7 @@ export const getAnilibriaRss = async (
 	params: GetAnilibriaRssQueryParams = {}
 ) => {
 	try {
-		return await getAnilibriaData<string>('/getTeam', params)
+		return await getAnilibriaData<string>('/getRSS', params)
 	} catch (error) {
 		throw error
 	}

@@ -3,7 +3,7 @@ interface GetAnilibriaRssQueries {
 	after: number
 	since: number
 	session: string
-	rss_type: string
+	rss_type: 'rss' | 'atom' | 'json'
 }
 
 export type GetAnilibriaRssQueryParams = Partial<GetAnilibriaRssQueries>
