@@ -31,7 +31,6 @@ import type {
 	ObjectSeries
 } from '@api/types'
 
-export default Anilibria
 export type {
 	Title,
 	YouTube,
@@ -46,6 +45,7 @@ export type {
 }
 export {
 	ANILIBRIA_API_URI_BY_DEFAULT,
+	Anilibria,
 	getAnilibriaTeam,
 	getAnilibriaFeed,
 	getAnilibriaGenres,

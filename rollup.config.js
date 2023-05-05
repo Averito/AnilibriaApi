@@ -7,7 +7,9 @@ export default {
         dir: 'dist',
         format: 'cjs',
         sourcemap: true,
-        minifyInternalExports: true
+        minifyInternalExports: true,
+        exports: 'named'
     },
-    plugins: [typescript(), typescriptPaths()]
+    plugins: [typescript(), typescriptPaths()],
+    external: ['axios']
 }
