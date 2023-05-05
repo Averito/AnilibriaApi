@@ -5,13 +5,13 @@
 Установка используя yarn:
 
 ```
-yarn add @averito/anilibria-api
+yarn add anilibria-api
 ```
 
 Установка используя npm:
 
 ```
-npm i @averito/anilibria-api
+npm i anilibria-api
 ```
 
 ## Пример
@@ -21,13 +21,13 @@ npm i @averito/anilibria-api
 #### CommonJS
 
 ```ts
-const { getAnilibriaTitle, Series } = require('@averito/anilibria-api');
+const { getAnilibriaTitle, Series } = require('anilibria-api');
 ```
 
 #### ES6
 
 ```ts
-import { Anilibria, Title } from '@averito/anilibria-api';
+import { Anilibria, Title } from 'anilibria-api';
 ```
 
 ### Использование

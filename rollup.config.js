@@ -4,7 +4,7 @@ import { typescriptPaths } from 'rollup-plugin-typescript-paths'
 export default {
     input: 'src/main.ts',
     output: {
-        dir: 'dist',
+        file: 'dist/index.js',
         format: 'cjs',
         sourcemap: true,
         minifyInternalExports: true,

@@ -1,0 +1,1 @@
+{"version":3,"file":"getAnilibriaGenres.types.d.ts","sourceRoot":"","sources":["../../../../src/api/methods/get-anilibria-genres/getAnilibriaGenres.types.ts"],"names":[],"mappings":"AAAA,UAAU,yBAAyB;IAClC,YAAY,EAAE,CAAC,GAAG,CAAC,CAAA;CACnB;AAED,MAAM,MAAM,6BAA6B,GAAG,OAAO,CAAC,yBAAyB,CAAC,CAAA"}
