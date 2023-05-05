@@ -28,7 +28,7 @@
 
     /* Modules */
 //    "module": "nodenext",                                /* Specify what module code is generated. */
-      "rootDir": ".",                                  /* Specify the root folder within your source files. */
+      "rootDir": "./src",                                  /* Specify the root folder within your source files. */
       "module": "esnext",
       "moduleResolution": "node",
       "resolveJsonModule": true,

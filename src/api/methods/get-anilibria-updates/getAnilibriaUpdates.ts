@@ -6,7 +6,7 @@ export const getAnilibriaUpdates = async (
 	params: GetAnilibriaUpdatesQueryParams = {}
 ) => {
 	try {
-		return await getAnilibriaData<Title[]>('/getRandomTitle', params)
+		return await getAnilibriaData<Title[]>('/getUpdates', params)
 	} catch (error) {
 		throw error
 	}

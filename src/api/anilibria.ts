@@ -46,7 +46,7 @@ export class Anilibria {
 			this._axiosInstance = axios.create(options.axiosOptions)
 	}
 
-	public async getAnilibriaTitle(params: GetAnilibriaTitleQueryParams = {}) {
+	public async getTitle(params: GetAnilibriaTitleQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title>(
 				'/getTitle',
@@ -58,7 +58,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaTitles(params: GetAnilibriaTitlesQueryParams = {}) {
+	public async getTitles(params: GetAnilibriaTitlesQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title[]>(
 				'/getTitles',
@@ -70,9 +70,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaUpdates(
-		params: GetAnilibriaUpdatesQueryParams = {}
-	) {
+	public async getUpdates(params: GetAnilibriaUpdatesQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title[]>(
 				'/getUpdates',
@@ -84,9 +82,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaChanges(
-		params: GetAnilibriaChangesQueryParams = {}
-	) {
+	public async getChanges(params: GetAnilibriaChangesQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title[]>(
 				'/getChanges',
@@ -98,9 +94,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaSchedule(
-		params: GetAnilibriaScheduleQueryParams = {}
-	) {
+	public async getSchedule(params: GetAnilibriaScheduleQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Schedule[]>(
 				'/getSchedule',
@@ -112,9 +106,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaRandomTitle(
-		params: GetAnilibriaRandomTitleQueryParams = {}
-	) {
+	public async getRandomTitle(params: GetAnilibriaRandomTitleQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title>(
 				'/getRandomTitle',
@@ -126,9 +118,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaYouTube(
-		params: GetAnilibriaYouTubeQueryParams = {}
-	) {
+	public async getYouTube(params: GetAnilibriaYouTubeQueryParams = {}) {
 		try {
 			return await getAnilibriaData<YouTube[]>(
 				'/getYouTube',
@@ -140,7 +130,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaFeed(params: GetAnilibriaFeedQueryParams = {}) {
+	public async getFeed(params: GetAnilibriaFeedQueryParams = {}) {
 		try {
 			return await getAnilibriaData<GetAnilibriaFeedReturn[]>(
 				'/getFeed',
@@ -152,7 +142,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaYears() {
+	public async getYears() {
 		try {
 			return await getAnilibriaData<number[]>(
 				'/getYears',
@@ -164,7 +154,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaGenres() {
+	public async getGenres() {
 		try {
 			return await getAnilibriaData<string[]>(
 				'/getGenres',
@@ -176,7 +166,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaCachingNodes() {
+	public async getCachingNodes() {
 		try {
 			return await getAnilibriaData<string[]>(
 				'/getCachingNodes',
@@ -188,7 +178,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaTeam() {
+	public async getTeam() {
 		try {
 			return await getAnilibriaData<GetAnilibriaTeamReturn>(
 				'/getTeam',
@@ -200,9 +190,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaSeedStats(
-		params: GetAnilibriaSeedStatsQueryParams = {}
-	) {
+	public async getSeedStats(params: GetAnilibriaSeedStatsQueryParams = {}) {
 		try {
 			return await getAnilibriaData<GetAnilibriaSeedStatsReturn[]>(
 				'/getSeedStats',
@@ -214,7 +202,7 @@ export class Anilibria {
 		}
 	}
 
-	public async getAnilibriaRss(params: GetAnilibriaRssQueryParams = {}) {
+	public async getRss(params: GetAnilibriaRssQueryParams = {}) {
 		try {
 			return await getAnilibriaData<string>(
 				'/getRSS',
@@ -226,9 +214,7 @@ export class Anilibria {
 		}
 	}
 
-	public async anilibriaSearchTitles(
-		params: AnilibriaSearchTitlesQueryParams = {}
-	) {
+	public async searchTitles(params: AnilibriaSearchTitlesQueryParams = {}) {
 		try {
 			return await getAnilibriaData<Title[]>(
 				'/searchTitles',
@@ -240,9 +226,7 @@ export class Anilibria {
 		}
 	}
 
-	public async anilibriaAdvancedSearch(
-		params: AnilibriaAdvancedSearchQueryParams
-	) {
+	public async advancedSearch(params: AnilibriaAdvancedSearchQueryParams) {
 		try {
 			return await getAnilibriaData<Title[]>(
 				'/advancedSearch',
