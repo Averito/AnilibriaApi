@@ -1,6 +1,6 @@
 {
   "name": "anilibria-api-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "This library is not an official wrapper over anilibria api",
   "scripts": {
     "start": "node dist/main.js",
@@ -43,8 +43,7 @@
     }
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "nhentai-api": "^3.4.3"
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.0",
